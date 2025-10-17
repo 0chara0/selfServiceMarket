@@ -1,0 +1,38 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 512MB
+      max-request-size: 512MB
+  application:
+    name: selfservicesupermarketdemo1
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/selfservice_superarket_demo1
+    username:
+    password:
+
+alipay:
+  easy:
+    protocol: https
+    gatewayHost: https://openapi-sandbox.dl.alipaydev.com/gateway.do
+    signType: RSA2
+    appId:
+    merchantPrivateKey:
+    alipayPublicKey:
+    notifyUrl: http://lokern.free.idcfengye.com/notify
+    publicKey:
+imagehost:
+  cloudflare:
+    accessKeyId:
+    secretAccessKey:
+    endPoint:
+    bucketName:
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: deleteStatus # 默认字段名为 deleted
+      logic-delete-value: 1 # 逻辑已删除值
+      logic-not-delete-value: 0 # 逻辑未删除值
+      id-type: auto
+server:
+  address: 0.0.0.0
